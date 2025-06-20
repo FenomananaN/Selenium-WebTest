@@ -1,0 +1,37 @@
+# Maven build output
+target/
+
+# Logs
+*.log
+
+# Environment variables
+.env
+.env.*
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+
+# Compiled Java classes
+*.class
+
+# Coverage reports
+coverage/
+
+# Generated files
+*.generated.*
+*.min.*
+
+# JAR/WAR files
+*.jar
+*.war
