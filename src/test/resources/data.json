@@ -1,0 +1,35 @@
+{
+    "userLogin":
+    [
+        {
+            "username": "user1",
+            "password": "password123",
+            "email": "user1@example.com",
+            "isValid": false
+        },
+        {
+            "username": "user2",
+            "password": "securePass456",
+            "email": "user2@example.com",
+            "isValid": false
+        },
+        {
+            "username": "user3",
+            "password": "mySecret789",
+            "email": "user3@example.com",
+            "isValid": false
+        },
+        {
+            "username": "user4",
+            "password": "passWord!@#",
+            "email": "user4@example.com",
+            "isValid": false
+        },
+        {
+            "username": "valentin@ritec.mg",
+            "password": "valentin@ritec.mg",
+            "email": "valentin@ritec.mg",
+            "isValid": true
+        }
+    ]
+}
