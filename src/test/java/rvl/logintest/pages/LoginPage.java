@@ -36,4 +36,8 @@ public class LoginPage {
         return driver.findElement(By.cssSelector("div.alert.alert-danger.alert-dismissible.position-absolute.w-100.fade.show")).getText();
     }
 
+    public WebElement getErrorFlashElement() {
+        return driver.findElement(By.cssSelector("div.alert.alert-danger.alert-dismissible.position-absolute.w-100.fade.show"));
+    }
+    
 }

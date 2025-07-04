@@ -48,7 +48,7 @@ public class LoginPageTest extends BaseTest  {
     }
 
     @Test(dataProvider = "getLoginData")
-    public void testLoginFeature(User user) {
+    public void testLoginFeature(User user) throws IOException {
 
         String email = user.getEmail();
         String password = user.getPassword();
@@ -67,7 +67,13 @@ public class LoginPageTest extends BaseTest  {
         
         if (!isValidUser) {
             System.out.println("Login failed as expected for invalid user");
-            assertEquals(loginPage.getErrorMessageText(), "Identifiants invalides.");
+            try {
+                assertEquals(loginPage.getErrorMessageText(), "feno"); //Identifiants invalides.
+            } catch (AssertionError e) {
+                takeScreenshot("login-failed-" + email);
+                takeScreenshot(loginPage.getErrorFlashElement(),"login-failed-message-" + email);
+                throw e; // Rethrow the assertion error to ensure the test fails
+            }
         } else {
             System.out.println("Login successful");
         }
